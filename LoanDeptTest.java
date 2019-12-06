@@ -29,45 +29,32 @@ String name;
         moneyOwed.collegeloan(40000);
         System.out.print("Money Owed per Month over 10 years: " + moneyOwed.getCollege());
      }
-      else if(name.equals("business"))
-     {
-        moneyOwed.moveTo(.038); //FIX NUMBER RATE
-        moneyOwed.bloan(20000); //FIX LOAN NUMBER
-        System.out.print("Money Owed per Month over ?? years: " + moneyOwed.getBusiness());
-     }
       else if(name.equals("home equity"))
       {
          moneyOwed.moveTo(0.0565);
          moneyOwed.hloan(25000);
          System.out.print("Money Owed per Month over 15 years: " + moneyOwed.getHome()); 
          //FIX NUMBERS TO ROUND 2 DECIMAL PLACES// 
-         
       }
  }
 }
 //**********************************************************
-//method 1 for MORTGAGE
 class LoanDept
 {
-//Default Constructor
     public LoanDept()
     {
         myMortgage = 0;
         myCar = 0;
         myCollege = 0;
-        myBusiness = 0;
         myHome = 0;
     }
-//Other Constructor
     public LoanDept(double mortgage, double car, double college, double business, double home)
     {
         myMortgage = mortgage;
         myCar = car;
         myCollege = college;
-        myBusiness = business;
         myHome = home;
     }
-//Accessor Methods
     public double getMortgage()
     {
         return myMortgage;
@@ -114,20 +101,6 @@ class LoanDept
     {
     
         myCollege = myCollege + amount * (interest/12);
-    }
-    public double getBusiness()
-    {
-        return myBusiness;
-    }
-    
-    public void setBusiness(double business)
-    {
-        myBusiness = business;
-    }
-    
-    public void bloan(double amount)
-    {
-        myBusiness = myBusiness + amount * (interest/12);
     }
     public double getHome()
     {
