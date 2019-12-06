@@ -138,7 +138,7 @@ class Investments
     }
     public void MMAround()
     {
-        myMMA = (int) (myCD* 100 +.0001)/100.00; 
+        myMMA = (int) (myMMA* 100 +.0001)/100.00; 
     }
      
        
