@@ -48,7 +48,7 @@ class LoanDept
         myCollege = 0;
         myHome = 0;
     }
-    public LoanDept(double mortgage, double car, double college, double business, double home)
+    public LoanDept(double mortgage, double car, double college, double home)
     {
         myMortgage = mortgage;
         myCar = car;
@@ -121,6 +121,5 @@ class LoanDept
     private double myMortgage;
     private double myCar;
     private double myCollege;
-    private double myBusiness;
     private double myHome;
 }
