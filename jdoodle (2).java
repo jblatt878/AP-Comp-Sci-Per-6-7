@@ -154,7 +154,7 @@ class Investments
     
     
     // Properties
-    private double myCD;  //Certificate of Deposit
-    private double myMMA; //Money Market Account
+    double myCD;  //Certificate of Deposit
+    double myMMA; //Money Market Account
 
 }
