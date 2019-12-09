@@ -54,12 +54,12 @@ Scanner customer = new Scanner(System.in);
     }
 }
 
-private String myName; 
-private String myAddress;
-private String myBirthday;
-private String myCardNumber;
-private String myPin;
-private String myUsername;
-private String myPassword;
+String myName; 
+String myAddress;
+String myBirthday;
+String myCardNumber;
+String myPin;
+String myUsername;
+String myPassword;
 }
 
