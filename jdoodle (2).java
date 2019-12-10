@@ -3,7 +3,7 @@ public class Display // Anthony Kravchenko  and Deep Patel 6/7 12_21_19
 {
     public static void main(String[] args)
     {
-        Investments sherman = new Investments(0,1000);
+        Investments sherman = new Investments(0,0);
         
          Investments.displayType();
         System.out.println("You have $" + sherman.getCD()+ " In your Certificate of Deposit account");
@@ -36,8 +36,16 @@ public class Display // Anthony Kravchenko  and Deep Patel 6/7 12_21_19
         
         //double
         sherman.setCD(0 + x -  a);  
-        sherman.setMMA(1000 + y - b);
-        
+        sherman.setMMA(0 + y - b);
+       
+        /*System.out.println("Would you like to transfer funds? Type 1 for yes or 2 for no.");
+        int trans = keyboard1.nextInt();
+        if (trans = 1)
+        {
+            System.out.println("Which account would you like to transfer to? Type 1 for CD or 2 for MMA.");
+            int trans2 = keyboard1.nextInt();
+            if 
+        }*/
        
        
         //Overdraft fees
