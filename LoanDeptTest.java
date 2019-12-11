@@ -6,34 +6,130 @@ public static void main(String[] args)
     double mortgage;
     double car; 
     double college;
+    int score;
     LoanDept moneyOwed = new LoanDept();
-String name;
+    String name;
+    int creditscore;
     System.out.print ( "Enter type of loan (lowercase): ");
     Scanner kind = new Scanner (System.in);
     name = kind.nextLine();
+    System.out.print ( "Enter your credit score: ");
+    Scanner ascore = new Scanner (System.in);
+    score = ascore.nextInt();
+
+//MORTGAGE
      if(name.equals("mortgage"))
      {
+         double mname = 0;
+//CREDIT SCORE
+if(score >= 300 && score <= 629)
+{
+  System.out.print ("Your credit score is TRASH. You can borrow $50000. "); 
+  mname = 50000;
+}
+if(score >= 630 && score <= 689)
+{
+  System.out.print ("Your credit score is OKAY. You can borrow $100000. "); 
+  mname = 100000;
+}
+if(score >= 690 && score <= 719)
+{
+  System.out.print ("Your credit score is PRETTY GOOD. You can borrow $150000. "); 
+  mname = 150000;
+}
+if(score >= 720 && score <= 850)
+{
+  System.out.print ("Your credit score is AMAZING. You can borrow $200000. "); 
+  mname = 200000;
+}
         moneyOwed.moveTo(0.0369);
-        moneyOwed.mloan(200000);
-        System.out.print("Money Owed per Month over 30 years: " + moneyOwed.getMortgage());
+        moneyOwed.mloan(mname);
+        System.out.print("Money Owed per Month over 30 years: $" + moneyOwed.getMortgage());
      }
+
+//CAR
       else if(name.equals("car"))
      {
+         double carname = 0;
+if(score >= 300 && score <= 629)
+{
+  System.out.print ("Your credit score is TRASH. You can borrow $50000. "); 
+  carname = 50000;
+}
+if(score >= 630 && score <= 689)
+{
+  System.out.print ("Your credit score is OKAY. You can borrow $100000. "); 
+  carname = 100000;
+}
+if(score >= 690 && score <= 719)
+{
+  System.out.print ("Your credit score is PRETTY GOOD. You can borrow $150000. "); 
+  carname = 150000;
+}
+if(score >= 720 && score <= 850)
+{
+  System.out.print ("Your credit score is AMAZING. You can borrow $200000. "); 
+  carname = 200000;
+}
         moneyOwed.moveTo(0.0421);
-        moneyOwed.cloan(20000);
-        System.out.print("Money Owed per Month over 5 years: " + moneyOwed.getCar());
+        moneyOwed.cloan(carname);
+        System.out.print("Money Owed per Month over 5 years: $" + moneyOwed.getCar());
      }
+     
+//COLLEGE
         else if(name.equals("college"))
      {
+          double cname = 0;
+if(score >= 300 && score <= 629)
+{
+  System.out.print ("Your credit score is TRASH. You can borrow $50000. "); 
+  cname = 50000;
+}
+if(score >= 630 && score <= 689)
+{
+  System.out.print ("Your credit score is OKAY. You can borrow $100000. "); 
+  cname = 100000;
+}
+if(score >= 690 && score <= 719)
+{
+  System.out.print ("Your credit score is PRETTY GOOD. You can borrow $150000. "); 
+  cname = 150000;
+}
+if(score >= 720 && score <= 850)
+{
+  System.out.print ("Your credit score is AMAZING. You can borrow $200000. "); 
+  cname = 200000;
+}
         moneyOwed.moveTo(0.0453);
-        moneyOwed.collegeloan(40000);
-        System.out.print("Money Owed per Month over 10 years: " + moneyOwed.getCollege());
+        moneyOwed.collegeloan(cname);
+        System.out.print("Money Owed per Month over 10 years: $" + moneyOwed.getCollege());
      }
       else if(name.equals("home equity"))
       {
+        double hname = 0;
+if(score >= 300 && score <= 629)
+{
+  System.out.print ("Your credit score is TRASH. You can borrow $50000. "); 
+  hname = 50000;
+}
+if(score >= 630 && score <= 689)
+{
+  System.out.print ("Your credit score is OKAY. You can borrow $100000. "); 
+  hname = 100000;
+}
+if(score >= 690 && score <= 719)
+{
+  System.out.print ("Your credit score is PRETTY GOOD. You can borrow $150000. "); 
+  hname = 150000;
+}
+if(score >= 720 && score <= 850)
+{
+  System.out.print ("Your credit score is AMAZING. You can borrow $200000. "); 
+  hname = 200000;
+}
          moneyOwed.moveTo(0.0565);
-         moneyOwed.hloan(25000);
-         System.out.print("Money Owed per Month over 15 years: " + moneyOwed.getHome()); 
+         moneyOwed.hloan(hname);
+         System.out.print("Money Owed per Month over 15 years: $" + moneyOwed.getHome()); 
          //FIX NUMBERS TO ROUND 2 DECIMAL PLACES// 
       }
  }
@@ -116,10 +212,10 @@ class LoanDept
     {
         myHome = myHome + amount * (interest/12);
     }
-    private double interest;
-    private double moneyOwed;
-    private double myMortgage;
-    private double myCar;
-    private double myCollege;
-    private double myHome;
+     double interest;
+     double moneyOwed;
+     double myMortgage;
+     double myCar;
+     double myCollege;
+     double myHome;
 }
