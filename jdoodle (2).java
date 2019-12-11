@@ -9,7 +9,7 @@ public class Display // Anthony Kravchenko  and Deep Patel 6/7 12_21_19
         System.out.println("You have $" + sherman.getCD()+ " In your Certificate of Deposit account");
         System.out.println("You have $" + sherman.getMMA()+ " In your Money Market account");
        
-       
+       //Deposits
        Scanner keyboard1 = new Scanner(System.in);
        System.out.print("Enter how much you wish to deposit in your Certificate of Deposit account: ");
         double x = keyboard1.nextDouble();
@@ -19,6 +19,9 @@ public class Display // Anthony Kravchenko  and Deep Patel 6/7 12_21_19
         double y = keyboard1.nextDouble();
         
         
+        
+        
+        //Withdrawls
          System.out.print("Enter how much you wish to withdraw in your Certificate of Deposit account, there will be a twenty dollar penalty: ");
         double a = keyboard1.nextDouble();
         
@@ -29,25 +32,66 @@ public class Display // Anthony Kravchenko  and Deep Patel 6/7 12_21_19
             }
         
          
-        
-        
+   
          System.out.print("Enter how much you wish to withdraw in your Money Market account: ");
         double b = keyboard1.nextDouble();
         
-        //double
-        sherman.setCD(0 + x -  a);  
-        sherman.setMMA(0 + y - b);
+        
+        //make transfer variable to prevent error
+        double trans4 = 0; 
+        double trans6 = 0;
        
-        /*System.out.println("Would you like to transfer funds? Type 1 for yes or 2 for no.");
+        
+        //Tranfer
+        System.out.println("Would you like to transfer funds from your checking account? Type 1 for yes or 2 for no.");
         int trans = keyboard1.nextInt();
         if (trans = 1)
         {
-            System.out.println("Which account would you like to transfer to? Type 1 for CD or 2 for MMA.");
-            int trans2 = keyboard1.nextInt();
-            if 
-        }*/
+            System.out.println("Would you like to transfer to your CD account? Type 1 for yes or 2 for no.");
+            int trans3 = keyboard1.nextInt();
+            if (trans3 = 1)
+            {
+                System.out.println("How much?");
+                trans4 = keyboard1.nextDouble();
+            }
+            else if (trans3 = 2)
+            {
+                 System.out.println(); 
+            }
+            
+            System.out.println("Would you like to transfer to your MMA account? Type 1 for yes or 2 for no.");
+            int trans5 = keyboard1.nextInt();
+            if (trans5 = 1)
+            {
+                System.out.println("How much?");
+                trans6 = keyboard1.nextDouble();
+            }
+            else if (tran5 = 2)
+            {
+                 System.out.println(); 
+            }
+            
+            
+        }
+        
+        if (trans = 2)
+        {
+           System.out.println(); 
+        }
        
+        
+        
        
+        //Deposit,withdraw,transfer
+        sherman.setCD(0 + x -  a + trans4);  
+        sherman.setMMA(0 + y - b + trans6);
+        
+        
+        //Take away from Checking account
+        sherman.setChecking(sherman.getChecking - trans4 - trans6);
+        
+        
+        
         //Overdraft fees
         sherman.MMAoverdraw();
        
