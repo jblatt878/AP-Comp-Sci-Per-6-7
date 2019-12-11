@@ -1,3 +1,12 @@
+/*
+ * Scanner for Matta
+ * convert string to account, if statements
+ * copy paste code lotta times
+ * 5 accounts
+ * seperate accounts, lists for them
+ * Joe mama
+ */
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -6,7 +15,17 @@ public class safeDeposit {
 
 	public static void main(String[] args) 
 	{
+		Scanner bnum = new Scanner(System.in);
+		Scanner pass = new Scanner(System.in);
+		//test account ( bnum: 3204 pass: oopsie )
 		
+		 List<List<String>> accounts = new ArrayList<List<String>>();
+		 List<String> Matta = new ArrayList<String>();
+		 
+		 accounts.add(Matta);
+		 
+		 
+		 	
 
 	
 	{
@@ -19,10 +38,16 @@ public class safeDeposit {
 
 	List<String> answers = new ArrayList<String>();
 
+	Scanner whatbox = new Scanner(System.in);
+	System.out.println("What's your account name?");
+	String bosdse = whatbox.next();
+	
 	
 
 	while (resetValue == 1){
-	 String box = new String();
+	 
+		
+	String box = new String();
 	 System.out.println("Press D to make a Deposit, Press W to make a Withdrawl?");
 	 Scanner asdf = new Scanner(System.in);
 	 box = asdf.next();
