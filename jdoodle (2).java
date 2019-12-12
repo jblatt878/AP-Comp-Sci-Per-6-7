@@ -4,6 +4,7 @@ public class Display // Anthony Kravchenko  and Deep Patel 6/7 12_21_19
     public static void main(String[] args)
     {
         Investments sherman = new Investments(0,0);
+        BankAccount boadi = new BankAccount();
         
          Investments.displayType();
         System.out.println("You have $" + sherman.getCD()+ " In your Certificate of Deposit account");
@@ -88,7 +89,7 @@ public class Display // Anthony Kravchenko  and Deep Patel 6/7 12_21_19
         
         
         //Take away from Checking account
-        sherman.setChecking(sherman.getChecking - trans4 - trans6);
+        boadi.setcheckingBalance(boadi.getcheckingBalance - trans4 - trans6);
         
         
         
