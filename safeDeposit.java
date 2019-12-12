@@ -1,34 +1,18 @@
-/*
- * Scanner for Matta
- * convert string to account, if statements
- * copy paste code lotta times
- * 5 accounts
- * seperate accounts, lists for them
- * Joe mama
- */
-
 import java.util.Scanner;
 import java.util.ArrayList;
-
 import java.util.List;
 public class safeDeposit {
 
 	public static void main(String[] args) 
 	{
-		Scanner bnum = new Scanner(System.in);
-		Scanner pass = new Scanner(System.in);
-		//test account ( bnum: 3204 pass: oopsie )
-		
-		 List<List<String>> accounts = new ArrayList<List<String>>();
-		 List<String> Matta = new ArrayList<String>();
-		 
-		 accounts.add(Matta);
-		 
-		 
-		 	
+        String boxnum = "45";
+        String boxpass = "48269";
+        String boxnum2 = "48";
+        String boxpass2 = "321123";
+        List<String> answers = new ArrayList<String>();
+        List<String> answers2 = new ArrayList<String>();
 
 	
-	{
 	   System.out.println("Welcome to the Safety Deposit Box)");
 	   System.out.println("Press 1 to begin");
 
@@ -36,14 +20,16 @@ public class safeDeposit {
 
 	   int resetValue = start.nextInt();
 
-	List<String> answers = new ArrayList<String>();
-
+    
 	Scanner whatbox = new Scanner(System.in);
-	System.out.println("What's your account name?");
+	System.out.println("What's box number?");
 	String bosdse = whatbox.next();
+	Scanner whatboxpas = new Scanner(System.in);
+	System.out.println("What's box password?");
+	String bosdse1 = whatboxpas.next();
 	
-	
-
+// Num: 45 Pass: 48269	
+if (bosdse.equals(boxnum) &&bosdse1.equals(boxpass) ){
 	while (resetValue == 1){
 	 
 		
@@ -92,7 +78,60 @@ else if(box.equalsIgnoreCase("w")) {
 	            break;
 	        }
 	        }
-	}
-
+    }
+    // Num: 48 Pass 321123
+    else if (bosdse.equals(boxnum2) &&bosdse1.equals(boxpass2) ){
+        while (resetValue == 1){
+	 
+		
+            String box = new String();
+             System.out.println("Press D to make a Deposit, Press W to make a Withdrawl?");
+             Scanner asdf = new Scanner(System.in);
+             box = asdf.next();
+             
+        if(box.equalsIgnoreCase("d")){	
+            Scanner items = new Scanner(System.in);
+            System.out.println("How many items do you want to deposit");
+             int amount = items.nextInt();
+        
+            for(int i=0; i < amount; i++){
+              String temp = new String();
+              Scanner thinginput = new Scanner(System.in);
+              System.out.println("Name the item:");
+              temp = thinginput.next();
+              
+              
+              answers2.add(temp);
+              
+              System.out.println("Your Deposit Box: ");
+              System.out.println(answers2);
+            }
+        }
+        else if(box.equalsIgnoreCase("w")) {
+            String maybe = new String();
+            Scanner p = new Scanner(System.in);	
+            System.out.println("Name the item, you would like to withdrawl:");
+            System.out.println(answers2);
+            maybe = p.next();
+            
+            answers.remove(answers.indexOf(maybe));
+            System.out.println(answers2);
+        }
+        else{
+            System.out.println("Execute and try again");
+        }
+            if (resetValue == 1){
+                        System.out.println("Type 0 to do another transaction or 2 to stop");
+                        resetValue =  start.nextInt();
+                    }//reset values for whileloop to make a start and stop solution
+                    if (resetValue == 0){
+                        resetValue++;
+                    }
+                    if (resetValue == 2){
+                    System.out.println("Have a great day!");
+                        break;
+                    }
+                    }
+    }
 }
 }
