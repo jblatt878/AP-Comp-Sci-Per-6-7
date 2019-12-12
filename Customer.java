@@ -1,7 +1,7 @@
 import java.util.*;
 // Alex Park, Dean Johnson, Anna Arushanyan 
 // Period 6/7 
-// December 9, 2019
+// December 12, 2019
 public class Customer {
 
 	public static void main(String[] args) {
@@ -10,11 +10,36 @@ public class Customer {
 	
     public Customer() 
     {
-TypeInfo();
-Confirm();
+        Scanner customer = new Scanner(System.in); 
+        System.out.println("Are you a new customer? Type yes or no.");
+        String status = customer.next();
+        if (status.equalsIgnoreCase("yes")) {
+            TypeNew();
+            ConfirmNew(); }
+        if (status.equalsIgnoreCase("no")) {
+            TypeReturn();
+            ConfirmReturn(); }
+        if (!(status.equalsIgnoreCase("yes"))&&!(status.equalsIgnoreCase("no"))) {
+            System.out.println("There was an error.\n");
+            New(); }
     }
     
-public void TypeInfo() {
+    public void New() {
+        Scanner customer = new Scanner(System.in); 
+        System.out.println("Are you a new customer? Type yes or no.");
+        String status = customer.next();
+        if (status.equalsIgnoreCase("yes")) {
+            TypeNew();
+            ConfirmNew(); }
+        if (status.equalsIgnoreCase("no")) {
+            TypeReturn();
+            ConfirmReturn(); }
+        if (!(status.equalsIgnoreCase("yes"))&&!(status.equalsIgnoreCase("no"))) {
+            System.out.println("There was an error.\n");
+            New(); }
+    }
+    
+public void TypeNew() {
     Scanner customer = new Scanner(System.in); 
     System.out.println("Enter your name (First-Last.....ex. John-Doe).");
     myName = customer.next();
@@ -24,15 +49,25 @@ public void TypeInfo() {
     myBirthday = customer.next();
     System.out.println("Enter your card number (16 digits).");
     cardNumber = customer.nextLong();
-    System.out.println("Enter your pin number (4 digits).");
+    System.out.println("Enter a pin number (4 digits).");
     pin = customer.nextInt();
     System.out.println("Enter a username.");
     accountName = customer.next();
     System.out.println("Enter a password.");
     myPassword = customer.next();
     }
+
+public void TypeReturn() {
+    Scanner customer = new Scanner(System.in);	
+    System.out.println("Enter your username.");
+    accountName = customer.next();
+    System.out.println("Enter your password.");
+    myPassword = customer.next();
+    System.out.println("Enter your pin number (4 digits).");
+    pin = customer.nextInt();
+}
     
-public void Confirm() {
+public void ConfirmNew() {
 Scanner customer = new Scanner(System.in); 
     System.out.println(myName);
     System.out.println(myAddress);
@@ -46,12 +81,28 @@ Scanner customer = new Scanner(System.in);
     if (confirm.equalsIgnoreCase("yes"))
         System.out.println("You are verified.");
     if (confirm.equalsIgnoreCase("no")) {
-        TypeInfo();
-        Confirm(); }
+        TypeNew();
+        ConfirmNew(); }
     if (!(confirm.equalsIgnoreCase("yes"))&&!(confirm.equalsIgnoreCase("no"))) {
         System.out.println("There was an error. Check your credentials again.");
-        Confirm();
+        ConfirmNew();
     }
+}
+public void ConfirmReturn() {
+Scanner customer = new Scanner(System.in); 
+    System.out.println(accountName);
+    System.out.println(myPassword);
+    System.out.println(pin);
+    System.out.println("Is all of this information correct? Type yes or no.");
+    String confirm = customer.next();
+    if (confirm.equalsIgnoreCase("yes"))
+        System.out.println("You are verified.");
+    if (confirm.equalsIgnoreCase("no")) {
+        TypeReturn();
+        ConfirmReturn(); }
+    if (!(confirm.equalsIgnoreCase("yes"))&&!(confirm.equalsIgnoreCase("no"))) {
+        System.out.println("There was an error. Check your credentials again.");
+        ConfirmReturn(); }
 }
 
 //accessor methods
@@ -148,4 +199,3 @@ int pin;
 String accountName;
 String myPassword;
 }
-
