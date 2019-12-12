@@ -45,28 +45,28 @@ public class Display // Anthony Kravchenko  and Deep Patel 6/7 12_21_19
         //Tranfer
         System.out.println("Would you like to transfer funds from your checking account? Type 1 for yes or 2 for no.");
         int trans = keyboard1.nextInt();
-        if (trans = 1)
+        if (trans == 1)
         {
             System.out.println("Would you like to transfer to your CD account? Type 1 for yes or 2 for no.");
             int trans3 = keyboard1.nextInt();
-            if (trans3 = 1)
+            if (trans3 == 1)
             {
                 System.out.println("How much?");
                 trans4 = keyboard1.nextDouble();
             }
-            else if (trans3 = 2)
+            else if (trans3 == 2)
             {
                  System.out.println(); 
             }
             
             System.out.println("Would you like to transfer to your MMA account? Type 1 for yes or 2 for no.");
             int trans5 = keyboard1.nextInt();
-            if (trans5 = 1)
+            if (trans5 == 1)
             {
                 System.out.println("How much?");
                 trans6 = keyboard1.nextDouble();
             }
-            else if (tran5 = 2)
+            else if (tran5 == 2)
             {
                  System.out.println(); 
             }
@@ -74,7 +74,7 @@ public class Display // Anthony Kravchenko  and Deep Patel 6/7 12_21_19
             
         }
         
-        if (trans = 2)
+        if (trans == 2)
         {
            System.out.println(); 
         }
