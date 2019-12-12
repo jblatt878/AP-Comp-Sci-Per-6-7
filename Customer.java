@@ -22,13 +22,13 @@ public void TypeInfo() {
     myAddress = customer.next();
     System.out.println("Enter your birthday (MM/DD/YYYY).");
     myBirthday = customer.next();
-    System.out.println("Enter your card number.");
-    cardNumber = customer.nextInt();
-    System.out.println("Enter your pin number.");
+    System.out.println("Enter your card number (16 digits).");
+    cardNumber = customer.nextLong();
+    System.out.println("Enter your pin number (4 digits).");
     pin = customer.nextInt();
-    System.out.println("Enter your username.");
+    System.out.println("Enter a username.");
     accountName = customer.next();
-    System.out.println("Enter your password.");
+    System.out.println("Enter a password.");
     myPassword = customer.next();
     }
     
@@ -44,7 +44,7 @@ Scanner customer = new Scanner(System.in);
     System.out.println("Is all of this information correct? Type yes or no.");
     String confirm = customer.next();
     if (confirm.equalsIgnoreCase("yes"))
-        System.out.println("You are verified. Enjoy your day.");
+        System.out.println("You are verified.");
     if (confirm.equalsIgnoreCase("no")) {
         TypeInfo();
         Confirm(); }
@@ -85,7 +85,7 @@ public String getMyPassword() {
 
 }
 
-public int getCardNumber() {
+public long getCardNumber() {
 
 	return cardNumber;
 
@@ -116,7 +116,7 @@ public void setAccountName(String input_accountName) {
 
 }
 
-public void setCardNumber(int input_cardNumber) {
+public void setCardNumber(long input_cardNumber) {
 
 	cardNumber = input_cardNumber;
 
@@ -143,7 +143,7 @@ public void setMyBirthday(String input_myBirthday) {
 String myName; 
 String myAddress;
 String myBirthday;
-int cardNumber;
+long cardNumber;
 int pin;
 String accountName;
 String myPassword;
