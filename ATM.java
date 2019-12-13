@@ -7,16 +7,14 @@ class ATM {
 	//default constructor
 
 	public ATM() {
-
+		
 		location = "";
+		
+		managedBy = "The Worst Bank";
 
-		managedBy = "";
-
-		accountName = "";
-
-		cardNumber = 0;
-
-		pin = 0;
+		this.verify();
+		
+		verified = false;
 
 	}
 
@@ -121,12 +119,21 @@ class ATM {
 	//methods
 
 	public void deposit() {
+		
+		if (verified = true) {
 
-		vito.checkingdeposit();
+			vito.checkingdeposit();
 
+		}
+		
+		else 
+			
+			this.checkVerification();
 	}
 
 	public int withdraw() {
+		
+		if (verified = true) {
 
 		//ui: get withdraw amount
 
@@ -215,6 +222,8 @@ class ATM {
 			return temp;
 
 		}
+		}
+		else this.checkVerification();
 
 	}
 
@@ -266,31 +275,7 @@ class ATM {
 
 				System.out.println("Account information is incorrect, please re-enter it and try again.");
 
-				Scanner input = new Scanner(System.in);
-
-				System.out.println("Enter account name:");
-
-				int input_cardNumber = input.nextInt();
-
-				this.setCardNumber(input_cardNumber);
-
-				System.out.println("Enter pin number:");
-
-				int input_pin = input.nextInt();
-
-				this.setPin(input_pin);
-
-				//input.close();
-
-				//DO NOT close a scanner then make more scanners
-
-				//since closing a Scanner also closes System.in and prevents making more
-
-				//because a NoSuchElementException is thrown since System.in is not found when calling
-
-				//new Scanner(System.in)
-
-				
+				this.verify();
 
 			}
 
@@ -298,7 +283,36 @@ class ATM {
 
 	}
 	
+	public void verify() {
+		
+		Scanner input = new Scanner(System.in);
+	
+		System.out.println("Enter account name:");
+
+		int input_cardNumber = input.nextInt();
+
+		this.setCardNumber(input_cardNumber);
+
+		System.out.println("Enter pin number:");
+
+		int input_pin = input.nextInt();
+
+		this.setPin(input_pin);	
+		
+		//input.close();
+
+		//DO NOT close a scanner then make more scanners
+
+		//since closing a Scanner also closes System.in and prevents making more
+
+		//because a NoSuchElementException is thrown since System.in is not found when calling
+
+		//new Scanner(System.in)
+	}
+	
 	public void UI() {
+		
+		this.verify();
 		
 		System.out.println("What would you like to access? d = deposit, w = withdraw, v = verify information, e = end");
 		
