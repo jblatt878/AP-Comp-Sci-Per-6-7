@@ -127,6 +127,10 @@ if (resetValue == 1){
                     }
                     }
     }
+    else
+    {
+      System.out.println("Wrong password.");
+    }
 }
 static Customer vito1 = Main.vito1;
 }
