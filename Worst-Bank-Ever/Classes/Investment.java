@@ -34,11 +34,11 @@ class Investments
    
      //Deposits
      Scanner keyboard1 = new Scanner(System.in);
-     System.out.print("Enter how much you wish to deposit in your Certificate of Deposit account: ");
+     System.out.print("Enter how much you wish to deposit in your Certificate of Deposit account, there is a 2% interest rate: ");
       double x = keyboard1.nextDouble();
     
   
-     System.out.print("Enter how much you wish to deposit in your Money Market account: ");
+     System.out.print("Enter how much you wish to deposit in your Money Market account, there is a 5% interest rate: ");
       double y = keyboard1.nextDouble();
     
     
@@ -55,7 +55,7 @@ class Investments
           }
     
      
-       System.out.print("Enter how much you wish to withdraw in your Money Market account: ");
+       System.out.print("Enter how much you wish to withdraw from your Money Market account, if your account balance falls below $500 there will be a twenty dollar penalty: ");
       double b = keyboard1.nextDouble();
     
     
@@ -111,7 +111,7 @@ class Investments
     
       //Take away from Checking account
       vito.setcheckingBalance(vito.getcheckingBalance() - trans4 - trans6);
-      System.out.println("You have "+ vito.getcheckingBalance() +"in your ");
+      
     
     
       //Overdraft fees
@@ -129,6 +129,7 @@ class Investments
     
    
       System.out.println();
+      System.out.println("You have "+ vito.getcheckingBalance() +"in your Checking Account ");
       System.out.println("You now have $" + this.getCD() + " In your Certificate of Deposit account");
       System.out.println("You now have $" + this.getMMA() + " In your Money Market account");
   }
