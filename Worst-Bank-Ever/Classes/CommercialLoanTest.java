@@ -424,5 +424,4 @@ class CommercialLoan
     double HiringCost = 1.075; //To cover the cost of the hiring process on a loan for new *staff
     double InsuranceCost = 1.1; //To cover insurance on a loan for new *equipment
     double Interest = 0.035;
-
 }
