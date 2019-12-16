@@ -129,9 +129,9 @@ class Investments
     
    
       System.out.println();
-      System.out.println("You have "+ vito.getcheckingBalance() +"in your Checking Account ");
-      System.out.println("You now have $" + this.getCD() + " In your Certificate of Deposit account");
-      System.out.println("You now have $" + this.getMMA() + " In your Money Market account");
+      System.out.println("You now have $"+ vito.getcheckingBalance() +"in your Checking Account ");
+      System.out.println("You now have $" + this.getCD() + " in your Certificate of Deposit account");
+      System.out.println("You now have $" + this.getMMA() + " in your Money Market account");
   }
    //Accessor methods
   public double getCD()
