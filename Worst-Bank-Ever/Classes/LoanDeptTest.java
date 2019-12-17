@@ -10,7 +10,7 @@ public static void main(String[] args)
     double salary;
     LoanDept moneyOwed = new LoanDept();
     String name;
-    System.out.print ( "Enter type of loan (lowercase): ");
+    System.out.print ( "Enter type of loan (lowercase): 'mortgage' 'car' 'college' 'home equity'");
     Scanner kind = new Scanner (System.in);
     name = kind.nextLine();
     System.out.print ( "Enter your salary: $");
