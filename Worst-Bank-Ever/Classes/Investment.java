@@ -26,22 +26,13 @@ class Investments
   }
    public void Investments1()
   {
-          
-    
+
       Investments.displayType();
       System.out.println("You have $" + this.getCD()+ " In your Certificate of Deposit account");
       System.out.println("You have $" + this.getMMA()+ " In your Money Market account");
    
-   
-   
-   
-   
-   
-   
-   
-   
     //for while statement
-     int loopy = 0
+     int loopy = 0;
    
    while(loopy!=2)
    {
@@ -150,11 +141,8 @@ class Investments
              
         System.out.print("Would you like to continue using our bank's investment services, type 1 for yes, 2 for no");
         loopy = keyboard1.nextInt();
-             
-             
-             
-             
-             
+                      
+    }
   }
   
   
