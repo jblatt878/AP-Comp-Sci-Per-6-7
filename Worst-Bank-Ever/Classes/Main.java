@@ -36,7 +36,14 @@ public class Main {
       }
       else if (ans1.equals("v"))
       {
-        vito2.UI();
+        String end1 = "g";
+        while (end1.equals("g"))
+        {
+          vito2.UI();
+          Scanner atm = new Scanner(System.in);
+           System.out.println("Are you done, or do you wish to go back to ATM? enter 'g' to go back or enter any other character to exit");
+           end1 = atm.next();
+        }
       }
       else if (ans1.equals("i"))
       {
@@ -73,7 +80,14 @@ public class Main {
       }
       else if (ans2.equals("v"))
       {
-        vito2.UI();
+        String end1 = "g";
+        while (end1.equals("g"))
+        {
+          vito2.UI();
+          Scanner atm = new Scanner(System.in);
+           System.out.println("Are you done, or do you wish to go back to ATM? enter 'g' to go back or enter any other character to exit");
+           end1 = atm.next();
+        }
       }
       else if (ans2.equals("i"))
       {
