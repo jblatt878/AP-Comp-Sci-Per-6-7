@@ -65,6 +65,8 @@ public void TypeReturn() {
     myPassword = customer.next();
     System.out.println("Enter your pin number (4 digits).");
     pin = customer.nextInt();
+    System.out.println("Enter your card number (16 digits).");
+    cardNumber = customer.nextLong();
 }
     
 public void ConfirmNew() {
@@ -93,6 +95,7 @@ Scanner customer = new Scanner(System.in);
     System.out.println(accountName);
     System.out.println(myPassword);
     System.out.println(pin);
+    System.out.println(cardNumber);
     System.out.println("Is all of this information correct? Type yes or no.");
     String confirm = customer.next();
     if (confirm.equalsIgnoreCase("yes"))
