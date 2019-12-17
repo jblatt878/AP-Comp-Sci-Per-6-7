@@ -1,7 +1,7 @@
 import java.util.*;
 // Alex Park, Dean Johnson, Anna Arushanyan 
 // Period 6/7 
-// December 12, 2019
+// December 17, 2019
 public class Customer {
 
 	public static void main(String[] args) {
@@ -49,11 +49,12 @@ public void TypeNew() {
     myBirthday = customer.next();
     System.out.println("Enter your card number (16 digits).");
     cardNumber = customer.nextLong();
+    cardAsString = Long.toString(cardNumber);
     System.out.println("Enter a pin number (4 digits).");
     pin = customer.nextInt();
     System.out.println("Enter a username.");
     accountName = customer.next();
-    System.out.println("Enter a password.");
+    System.out.println("Enter a password (at least 8 characters).");
     myPassword = customer.next();
     }
 
@@ -61,12 +62,13 @@ public void TypeReturn() {
     Scanner customer = new Scanner(System.in);	
     System.out.println("Enter your username.");
     accountName = customer.next();
-    System.out.println("Enter your password.");
+    System.out.println("Enter your password (at least 8 characters).");
     myPassword = customer.next();
     System.out.println("Enter your pin number (4 digits).");
     pin = customer.nextInt();
     System.out.println("Enter your card number (16 digits).");
     cardNumber = customer.nextLong();
+    cardAsString = Long.toString(cardNumber);
 }
     
 public void ConfirmNew() {
@@ -74,10 +76,10 @@ Scanner customer = new Scanner(System.in);
     System.out.println(myName);
     System.out.println(myAddress);
     System.out.println(myBirthday);
-    System.out.println(cardNumber);
+    System.out.println("************" + cardAsString.substring(12));
     System.out.println(pin);
     System.out.println(accountName);
-    System.out.println(myPassword);
+    System.out.println("****" + myPassword.substring(4));
     System.out.println("Is all of this information correct? Type yes or no.");
     String confirm = customer.next();
     if (confirm.equalsIgnoreCase("yes"))
@@ -93,9 +95,9 @@ Scanner customer = new Scanner(System.in);
 public void ConfirmReturn() {
 Scanner customer = new Scanner(System.in); 
     System.out.println(accountName);
-    System.out.println(myPassword);
+    System.out.println("****" + myPassword.substring(4));
     System.out.println(pin);
-    System.out.println(cardNumber);
+    System.out.println("************" + cardAsString.substring(12));
     System.out.println("Is all of this information correct? Type yes or no.");
     String confirm = customer.next();
     if (confirm.equalsIgnoreCase("yes"))
@@ -198,6 +200,7 @@ String myName;
 String myAddress;
 String myBirthday;
 long cardNumber;
+String cardAsString;
 int pin;
 String accountName;
 String myPassword;
