@@ -26,20 +26,55 @@ class Investments
   }
    public void Investments1()
   {
-
+          
+    
+   
+    
+    
       Investments.displayType();
       System.out.println("You have $" + this.getCD()+ " In your Certificate of Deposit account");
       System.out.println("You have $" + this.getMMA()+ " In your Money Market account");
    
+   
+   //Type of CD plan
+   Scanner keyboard1 = new Scanner(System.in);
+   System.out.println("What kind of CD account do you want? Type 1 for a One-Year Plan, 2 for a Five-Year Plan ");
+   int CDtype = keyboard1.nextDouble();
+        
+    int loopy = 0
+    while(loopy!=2)
+   {
+        if(CDtype!= 1 && CDtype!=2)
+     {
+         System.out.println("You did not type either 1 or 2");
+         System.out.println("What kind of CD account do you want? Type 1 for a One-Year Plan, 2 for a Five-Year Plan ");
+         CDtype = keyboard1.nextDouble();
+     }
+     if(CDtype== 1 || CDtype==2)
+     {
+         loopy=2
+     }
+   }
+   
+   
+   
+   
     //for while statement
-     int loopy = 0;
+      loopy = 0
    
    while(loopy!=2)
    {
    
         //Deposits
-         Scanner keyboard1 = new Scanner(System.in);
-        System.out.print("Enter how much you wish to deposit in your Certificate of Deposit account, there is a 2% interest rate: ");
+         if(CDtype==1)
+        {
+            System.out.print("Enter how much you wish to deposit in your One-Year Certificate of Deposit account, there is a 2% interest rate: ");
+        }
+        else
+        {
+            System.out.print("Enter how much you wish to deposit in your Five-Year Certificate of Deposit account, there is a 7% interest rate: ");
+        }
+        
         double x = keyboard1.nextDouble();
     
   
@@ -110,8 +145,8 @@ class Investments
     
    
          //Deposit,withdraw,transfer
-        this.setCD(0 + x -  a + trans4);
-        this.setMMA(0 + y - b + trans6);
+        this.setCD(this.getCD() + x -  a + trans4);
+        this.setMMA(this.getMMA() + y - b + trans6);
     
     
          //Take away from Checking account
@@ -123,7 +158,15 @@ class Investments
         this.MMAoverdraw();
    
         //Interest
-        this.CDinterest();
+        if(CDtype==1)
+        {
+            this.CDinterest();
+        }
+        else
+        {
+            this.CDinterest2();
+        }
+        
         this.MMAinterest();
     
         //Round
@@ -141,8 +184,11 @@ class Investments
              
         System.out.print("Would you like to continue using our bank's investment services, type 1 for yes, 2 for no");
         loopy = keyboard1.nextInt();
-                      
-    }
+             
+             
+             
+             
+             
   }
   
   
@@ -179,6 +225,10 @@ class Investments
    public void CDinterest()
   {
       myCD = myCD*1.02;
+  }
+  public void CDinterest2()
+  {
+      myCD = myCD*1.07;
   }
   public void MMAinterest()
   {
