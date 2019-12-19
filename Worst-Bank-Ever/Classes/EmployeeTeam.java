@@ -59,7 +59,7 @@ public class EmployeeTeam
      FIrate = ( pay * .0927);
      SIrate = ( pay * .0206);
      tax = (FIrate + SIrate);
-     netpay = ( pay + tax );
+     netpay = ( pay - tax );
      System.out.println("*****************************"); 
      System.out.println("Employee : Bank Teller"); 
      System.out.println("Hour : " + hours ); 
