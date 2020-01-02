@@ -14,6 +14,7 @@ public class Main {
 
     System.out.println("Welcome to The Worst Bank™");
     String end = "g";
+    vito1.main(args);
     while (end.equals("g"))
     {
 
@@ -24,7 +25,6 @@ public class Main {
     String ans = question.next();
     if (ans.equals("c"))
     {
-      vito1.main(args);
       System.out.println("Welcome customer!"); 
       Scanner question1 = new Scanner(System.in);
       System.out.println("Do you wish to access your account, go to the virtual ATM, start an investment, take out a loan, go to the safety deposit boxes, or exit.");

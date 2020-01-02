@@ -39,20 +39,20 @@ class Investments
    //Type of CD plan
    Scanner keyboard1 = new Scanner(System.in);
    System.out.println("What kind of CD account do you want? Type 1 for a One-Year Plan, 2 for a Five-Year Plan ");
-   int CDtype = keyboard1.nextDouble();
+   int CDtype = keyboard1.nextInt();
         
-    int loopy = 0
+    int loopy = 0;
     while(loopy!=2)
    {
         if(CDtype!= 1 && CDtype!=2)
      {
          System.out.println("You did not type either 1 or 2");
          System.out.println("What kind of CD account do you want? Type 1 for a One-Year Plan, 2 for a Five-Year Plan ");
-         CDtype = keyboard1.nextDouble();
+         CDtype = keyboard1.nextInt();
      }
      if(CDtype== 1 || CDtype==2)
      {
-         loopy=2
+         loopy=2;
      }
    }
    
@@ -60,7 +60,7 @@ class Investments
    
    
     //for while statement
-      loopy = 0
+      loopy = 0;
    
    while(loopy!=2)
    {
@@ -183,17 +183,13 @@ class Investments
              
              
         System.out.print("Would you like to continue using our bank's investment services, type 1 for yes, 2 for no");
+        System.out.println();
         loopy = keyboard1.nextInt();
-             
-             
-             
-             
-             
+          
+  }
   }
   
-  
-  
-  
+
    //Accessor methods
   public double getCD()
   {
